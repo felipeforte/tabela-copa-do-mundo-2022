@@ -29,6 +29,9 @@
 		.jogocaixa {
 			width:20px;
 		}
+		.jogos-rivais {
+			margin:auto;
+		}
 	
 			
 	</style>
@@ -36,8 +39,38 @@
 
 <body>
 	<h2 class="cabeçalho" id="hgA">Grupo A</h2>
-	<table><tr>Catar <input type="text" class="jogocaixa" id="Catar"> x <input type="text" class="jogocaixa" id="${selecoes[j].nome}-${selecoes[i].nome}"> ${selecoes[j].nome}`;
-				cabeçalho.after(div);</tr></table>
+	<table class="jogos-rivais">
+		<tr>
+			<td>Catar</td>
+			<td><input type="text" class="jogocaixa" id="Catar-Equador"> x <input type="text" class="jogocaixa" id="Equador-Catar"></td>
+			<td>Equador</td>
+		</tr>
+		<tr>
+			<td>Catar</td>
+			<td><input type="text" class="jogocaixa" id="Catar-Holanda"> x <input type="text" class="jogocaixa" id="Holanda-Catar"></td>
+			<td>Holanda</td>
+		</tr>
+		<tr>
+			<td>Catar</td>
+			<td><input type="text" class="jogocaixa" id="Catar-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Catar"></td>
+			<td>Senegal</td>
+		</tr>
+		<tr>
+			<td>Equador</td>
+			<td><input type="text" class="jogocaixa" id="Equador-Holanda"> x <input type="text" class="jogocaixa" id="Holanda-Equador"></td>
+			<td>Holanda</td>
+		</tr>
+		<tr>
+			<td>Equador</td>
+			<td><input type="text" class="jogocaixa" id="Equador-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Equador"></td>
+			<td>Senegal</td>
+		</tr>
+		<tr>
+			<td>Holanda</td>
+			<td><input type="text" class="jogocaixa" id="Holanda-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Holanda"></td>
+			<td>Senegal</td>
+		</tr>
+	</table>
 	<table class="tabela">
 		<tbody id="tabela-ga">
 			<tr>
@@ -54,6 +87,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgB">Grupo B</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Estados Unidos</td>
+			<td><input type="text" class="jogocaixa" id="EUA-Inglaterra"> x <input type="text" class="jogocaixa" id="Inglaterra-EUA"></td>
+			<td>Inglaterra</td>
+		</tr>
+		<tr>
+			<td>Estados Unidos</td>
+			<td><input type="text" class="jogocaixa" id="EUA-Ira"> x <input type="text" class="jogocaixa" id="Ira-EUA"></td>
+			<td>Irã</td>
+		</tr>
+		<tr>
+			<td>Estados Unidos</td>
+			<td><input type="text" class="jogocaixa" id="EUA-Gales"> x <input type="text" class="jogocaixa" id="Gales-EUA"></td>
+			<td>País de Gales</td>
+		</tr>
+		<tr>
+			<td>Inglaterra</td>
+			<td><input type="text" class="jogocaixa" id="Inglaterra-Ira"> x <input type="text" class="jogocaixa" id="Ira-Inglaterra"></td>
+			<td>Irã</td>
+		</tr>
+		<tr>
+			<td>Inglaterra</td>
+			<td><input type="text" class="jogocaixa" id="Inglaterra-Gales"> x <input type="text" class="jogocaixa" id="Gales-Inglaterra"></td>
+			<td>País de Gales</td>
+		</tr>
+		<tr>
+			<td>Irã</td>
+			<td><input type="text" class="jogocaixa" id="Ira-Gales"> x <input type="text" class="jogocaixa" id="Gales-Ira"></td>
+			<td>País de Gales</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gb">
 			<tr>
@@ -70,6 +135,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgC">Grupo C</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Argentina</td>
+			<td><input type="text" class="jogocaixa" id="Argentina-Arabia"> x <input type="text" class="jogocaixa" id="Arabia-Argentina"></td>
+			<td>Arábia Saudita</td>
+		</tr>
+		<tr>
+			<td>Argentina</td>
+			<td><input type="text" class="jogocaixa" id="Argentina-Mexico"> x <input type="text" class="jogocaixa" id="Mexico-Argentina"></td>
+			<td>México</td>
+		</tr>
+		<tr>
+			<td>Argentina</td>
+			<td><input type="text" class="jogocaixa" id="Argentina-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Argentina"></td>
+			<td>Polônia</td>
+		</tr>
+		<tr>
+			<td>Arábia Saudita</td>
+			<td><input type="text" class="jogocaixa" id="Arabia-Mexico"> x <input type="text" class="jogocaixa" id="Mexico-Arabia"></td>
+			<td>México</td>
+		</tr>
+		<tr>
+			<td>Arábia Saudita</td>
+			<td><input type="text" class="jogocaixa" id="Arabia-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Arabia"></td>
+			<td>Polônia</td>
+		</tr>
+		<tr>
+			<td>México</td>
+			<td><input type="text" class="jogocaixa" id="Mexico-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Mexico"></td>
+			<td>Polônia</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gc">
 			<tr>
@@ -86,6 +183,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgD">Grupo D</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Austrália</td>
+			<td><input type="text" class="jogocaixa" id="Australia-Dinamarca"> x <input type="text" class="jogocaixa" id="Dinamarca-Australia"></td>
+			<td>Dinamarca</td>
+		</tr>
+		<tr>
+			<td>Austrália</td>
+			<td><input type="text" class="jogocaixa" id="Australia-Franca"> x <input type="text" class="jogocaixa" id="Franca-Australia"></td>
+			<td>França</td>
+		</tr>
+		<tr>
+			<td>Austrália</td>
+			<td><input type="text" class="jogocaixa" id="Australia-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Australia"></td>
+			<td>Tunísia</td>
+		</tr>
+		<tr>
+			<td>Dinamarca</td>
+			<td><input type="text" class="jogocaixa" id="Dinamarca-Franca"> x <input type="text" class="jogocaixa" id="Franca-Dinamarca"></td>
+			<td>França</td>
+		</tr>
+		<tr>
+			<td>Dinamarca</td>
+			<td><input type="text" class="jogocaixa" id="Dinamarca-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Dinamarca"></td>
+			<td>Tunísia</td>
+		</tr>
+		<tr>
+			<td>França</td>
+			<td><input type="text" class="jogocaixa" id="Franca-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Franca"></td>
+			<td>Tunísia</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gd">
 			<tr>
@@ -102,6 +231,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgE">Grupo E</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Alemanha</td>
+			<td><input type="text" class="jogocaixa" id="Alemanha-CostaRica"> x <input type="text" class="jogocaixa" id="CostaRica-Alemanha"></td>
+			<td>Costa Rica</td>
+		</tr>
+		<tr>
+			<td>Alemanha</td>
+			<td><input type="text" class="jogocaixa" id="Alemanha-Espanha"> x <input type="text" class="jogocaixa" id="Espanha-Alemanha"></td>
+			<td>Espanha</td>
+		</tr>
+		<tr>
+			<td>Alemanha</td>
+			<td><input type="text" class="jogocaixa" id="Alemanha-Japao"> x <input type="text" class="jogocaixa" id="Japao-Alemanha"></td>
+			<td>Japão</td>
+		</tr>
+		<tr>
+			<td>Costa Rica</td>
+			<td><input type="text" class="jogocaixa" id="CostaRica-Espanha"> x <input type="text" class="jogocaixa" id="Espanha-CostaRica"></td>
+			<td>Espanha</td>
+		</tr>
+		<tr>
+			<td>Costa Rica</td>
+			<td><input type="text" class="jogocaixa" id="CostaRica-Japao"> x <input type="text" class="jogocaixa" id="Japao-CostaRica"></td>
+			<td>Japão</td>
+		</tr>
+		<tr>
+			<td>Espanha</td>
+			<td><input type="text" class="jogocaixa" id="Espanha-Japao"> x <input type="text" class="jogocaixa" id="Espanha-Japao"></td>
+			<td>Japão</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-ge">
 			<tr>
@@ -118,6 +279,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgF">Grupo F</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Bélgica</td>
+			<td><input type="text" class="jogocaixa" id="Belgica-Canada"> x <input type="text" class="jogocaixa" id="Canada-Belgica"></td>
+			<td>Canadá</td>
+		</tr>
+		<tr>
+			<td>Bélgica</td>
+			<td><input type="text" class="jogocaixa" id="Belgica-Croacia"> x <input type="text" class="jogocaixa" id="Croacia-Belgica"></td>
+			<td>Croácia</td>
+		</tr>
+		<tr>
+			<td>Bélgica</td>
+			<td><input type="text" class="jogocaixa" id="Belgica-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Belgica"></td>
+			<td>Marrocos</td>
+		</tr>
+		<tr>
+			<td>Canadá</td>
+			<td><input type="text" class="jogocaixa" id="Canada-Croacia"> x <input type="text" class="jogocaixa" id="Croacia-Canada"></td>
+			<td>Croácia</td>
+		</tr>
+		<tr>
+			<td>Canadá</td>
+			<td><input type="text" class="jogocaixa" id="Canada-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Canada"></td>
+			<td>Marrocos</td>
+		</tr>
+		<tr>
+			<td>Croácia</td>
+			<td><input type="text" class="jogocaixa" id="Croacia-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Croacia"></td>
+			<td>Marrocos</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gf">
 			<tr>
@@ -134,6 +327,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgG">Grupo G</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Brasil</td>
+			<td><input type="text" class="jogocaixa" id="Brasil-Camaroes"> x <input type="text" class="jogocaixa" id="Camaroes-Brasil"></td>
+			<td>Camarões</td>
+		</tr>
+		<tr>
+			<td>Brasil</td>
+			<td><input type="text" class="jogocaixa" id="Brasil-Suica"> x <input type="text" class="jogocaixa" id="Suica-Brasil"></td>
+			<td>Suíça</td>
+		</tr>
+		<tr>
+			<td>Brasil</td>
+			<td><input type="text" class="jogocaixa" id="Brasil-Servia"> x <input type="text" class="jogocaixa" id="Servia-Brasil"></td>
+			<td>Sérvia</td>
+		</tr>
+		<tr>
+			<td>Camarões</td>
+			<td><input type="text" class="jogocaixa" id="Camaroes-Suica"> x <input type="text" class="jogocaixa" id="Suica-Camaroes"></td>
+			<td>Suíça</td>
+		</tr>
+		<tr>
+			<td>Camarões</td>
+			<td><input type="text" class="jogocaixa" id="Camaroes-Servia"> x <input type="text" class="jogocaixa" id="Servia-Camaroes"></td>
+			<td>Sérvia</td>
+		</tr>
+		<tr>
+			<td>Suíça</td>
+			<td><input type="text" class="jogocaixa" id="Suica-Servia"> x <input type="text" class="jogocaixa" id="Servia-Suica"></td>
+			<td>Sérvia</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gg">
 			<tr>
@@ -150,6 +375,38 @@
 	 </table>
 	 
 	 <h2 class="cabeçalho" id="hgH">Grupo H</h2>
+	 <table class="jogos-rivais">
+		<tr>
+			<td>Coreia do Sul	</td>
+			<td><input type="text" class="jogocaixa" id="Coreia-Gana"> x <input type="text" class="jogocaixa" id="Gana-Coreia"></td>
+			<td>Gana</td>
+		</tr>
+		<tr>
+			<td>Coreia do Sul	</td>
+			<td><input type="text" class="jogocaixa" id="Coreia-Portugal"> x <input type="text" class="jogocaixa" id="Portugal-Coreia"></td>
+			<td>Portugal</td>
+		</tr>
+		<tr>
+			<td>Coreia do Sul	</td>
+			<td><input type="text" class="jogocaixa" id="Coreia-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Coreia"></td>
+			<td>Uruguai</td>
+		</tr>
+		<tr>
+			<td>Gana</td>
+			<td><input type="text" class="jogocaixa" id="Gana-Portugal"> x <input type="text" class="jogocaixa" id="Portugal-Gana"></td>
+			<td>Portugal</td>
+		</tr>
+		<tr>
+			<td>Gana</td>
+			<td><input type="text" class="jogocaixa" id="Gana-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Gana"></td>
+			<td>Uruguai</td>
+		</tr>
+		<tr>
+			<td>Portugal</td>
+			<td><input type="text" class="jogocaixa" id="Portugal-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Portugal"></td>
+			<td>Uruguai</td>
+		</tr>
+	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gh">
 			<tr>
@@ -252,12 +509,6 @@
 			tabela.append(tr);
 			if (i%4 === 0) {
 				var n = i+4;
-			}
-			for (j=i+1;j<n;j++) {
-				var div = document.createElement("div");
-				div.classList.add("jogo");
-				div.innerHTML = `${selecoes[i].nome} <input type="text" class="jogocaixa" id="${selecoes[i].nome}-${selecoes[j].nome}"> x <input type="text" class="jogocaixa" id="${selecoes[j].nome}-${selecoes[i].nome}"> ${selecoes[j].nome}`;
-				cabeçalho.after(div);
 			}
 		}
 		
