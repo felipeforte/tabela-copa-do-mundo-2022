@@ -1,0 +1,31 @@
+.cabeçalho {
+			font-size: 35px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.tabela {
+			width: 100%;
+			background-color: #f8f9fa;
+			color: #202122;
+			margin: 1em 0;
+			border: 1px solid #a2a9b1;
+			border-collapse: collapse;
+		}
+		.tabela > * > tr > th {
+			background-color: #eaecf0;
+			text-align: center;
+		}
+		.tabela > * > tr > th,
+		.tabela > * > tr > td {
+			border: 1px solid #a2a9b1;
+			padding: 0.2em 0.4em;
+		}
+		.jogo {
+			text-align: center;
+		}
+		.jogocaixa {
+			width:20px;
+		}
+		.jogos-rivais {
+			margin:auto;
+		}
