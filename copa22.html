@@ -1,82 +1,48 @@
 <html>
 <head>
-	<style>
-		.cabeçalho {
-			font-size: 35px;
-			text-align: center;
-			margin-bottom: 10px;
-		}
-		.tabela {
-			width: 100%;
-			background-color: #f8f9fa;
-			color: #202122;
-			margin: 1em 0;
-			border: 1px solid #a2a9b1;
-			border-collapse: collapse;
-		}
-		.tabela > * > tr > th {
-			background-color: #eaecf0;
-			text-align: center;
-		}
-		.tabela > * > tr > th,
-		.tabela > * > tr > td {
-			border: 1px solid #a2a9b1;
-			padding: 0.2em 0.4em;
-		}
-		.jogo {
-			text-align: center;
-		}
-		.jogocaixa {
-			width:20px;
-		}
-		.jogos-rivais {
-			margin:auto;
-		}
-	
-			
-	</style>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 
 <body>
-	<h2 class="cabeçalho" id="hgA">Grupo A</h2>
+	<h2 class="cabeÃ§alho" id="hgA">Grupo A</h2>
 	<table class="jogos-rivais">
 		<tr>
 			<td>Catar</td>
-			<td><input type="text" class="jogocaixa" id="Catar-Equador"> x <input type="text" class="jogocaixa" id="Equador-Catar"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Catar-Equador"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Equador-Catar"></td>
 			<td>Equador</td>
 		</tr>
 		<tr>
 			<td>Catar</td>
-			<td><input type="text" class="jogocaixa" id="Catar-Holanda"> x <input type="text" class="jogocaixa" id="Holanda-Catar"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Catar-Holanda"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Holanda-Catar"></td>
 			<td>Holanda</td>
 		</tr>
 		<tr>
 			<td>Catar</td>
-			<td><input type="text" class="jogocaixa" id="Catar-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Catar"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Catar-Senegal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Senegal-Catar"></td>
 			<td>Senegal</td>
 		</tr>
 		<tr>
 			<td>Equador</td>
-			<td><input type="text" class="jogocaixa" id="Equador-Holanda"> x <input type="text" class="jogocaixa" id="Holanda-Equador"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Equador-Holanda"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Holanda-Equador"></td>
 			<td>Holanda</td>
 		</tr>
 		<tr>
 			<td>Equador</td>
-			<td><input type="text" class="jogocaixa" id="Equador-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Equador"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Equador-Senegal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Senegal-Equador"></td>
 			<td>Senegal</td>
 		</tr>
 		<tr>
 			<td>Holanda</td>
-			<td><input type="text" class="jogocaixa" id="Holanda-Senegal"> x <input type="text" class="jogocaixa" id="Senegal-Holanda"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Holanda-Senegal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Senegal-Holanda"></td>
 			<td>Senegal</td>
 		</tr>
 	</table>
 	<table class="tabela">
 		<tbody id="tabela-ga">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -86,45 +52,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgB">Grupo B</h2>
+	 <h2 class="cabeÃ§alho" id="hgB">Grupo B</h2>
 	 <table class="jogos-rivais">
 		<tr>
 			<td>Estados Unidos</td>
-			<td><input type="text" class="jogocaixa" id="EUA-Inglaterra"> x <input type="text" class="jogocaixa" id="Inglaterra-EUA"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUA-Inglaterra"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Inglaterra-EUA"></td>
 			<td>Inglaterra</td>
 		</tr>
 		<tr>
 			<td>Estados Unidos</td>
-			<td><input type="text" class="jogocaixa" id="EUA-Ira"> x <input type="text" class="jogocaixa" id="Ira-EUA"></td>
-			<td>Irã</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUA-Ira"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Ira-EUA"></td>
+			<td>IrÃ£</td>
 		</tr>
 		<tr>
 			<td>Estados Unidos</td>
-			<td><input type="text" class="jogocaixa" id="EUA-Gales"> x <input type="text" class="jogocaixa" id="Gales-EUA"></td>
-			<td>País de Gales</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUA-Gales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gales-EUA"></td>
+			<td>PaÃ­s de Gales</td>
 		</tr>
 		<tr>
 			<td>Inglaterra</td>
-			<td><input type="text" class="jogocaixa" id="Inglaterra-Ira"> x <input type="text" class="jogocaixa" id="Ira-Inglaterra"></td>
-			<td>Irã</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Inglaterra-Ira"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Ira-Inglaterra"></td>
+			<td>IrÃ£</td>
 		</tr>
 		<tr>
 			<td>Inglaterra</td>
-			<td><input type="text" class="jogocaixa" id="Inglaterra-Gales"> x <input type="text" class="jogocaixa" id="Gales-Inglaterra"></td>
-			<td>País de Gales</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Inglaterra-Gales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gales-Inglaterra"></td>
+			<td>PaÃ­s de Gales</td>
 		</tr>
 		<tr>
-			<td>Irã</td>
-			<td><input type="text" class="jogocaixa" id="Ira-Gales"> x <input type="text" class="jogocaixa" id="Gales-Ira"></td>
-			<td>País de Gales</td>
+			<td>IrÃ£</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Ira-Gales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gales-Ira"></td>
+			<td>PaÃ­s de Gales</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gb">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -134,45 +100,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgC">Grupo C</h2>
+	 <h2 class="cabeÃ§alho" id="hgC">Grupo C</h2>
 	 <table class="jogos-rivais">
 		<tr>
 			<td>Argentina</td>
-			<td><input type="text" class="jogocaixa" id="Argentina-Arabia"> x <input type="text" class="jogocaixa" id="Arabia-Argentina"></td>
-			<td>Arábia Saudita</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Argentina-Arabia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Arabia-Argentina"></td>
+			<td>ArÃ¡bia Saudita</td>
 		</tr>
 		<tr>
 			<td>Argentina</td>
-			<td><input type="text" class="jogocaixa" id="Argentina-Mexico"> x <input type="text" class="jogocaixa" id="Mexico-Argentina"></td>
-			<td>México</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Argentina-Mexico"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Mexico-Argentina"></td>
+			<td>MÃ©xico</td>
 		</tr>
 		<tr>
 			<td>Argentina</td>
-			<td><input type="text" class="jogocaixa" id="Argentina-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Argentina"></td>
-			<td>Polônia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Argentina-Polonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Polonia-Argentina"></td>
+			<td>PolÃ´nia</td>
 		</tr>
 		<tr>
-			<td>Arábia Saudita</td>
-			<td><input type="text" class="jogocaixa" id="Arabia-Mexico"> x <input type="text" class="jogocaixa" id="Mexico-Arabia"></td>
-			<td>México</td>
+			<td>ArÃ¡bia Saudita</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Arabia-Mexico"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Mexico-Arabia"></td>
+			<td>MÃ©xico</td>
 		</tr>
 		<tr>
-			<td>Arábia Saudita</td>
-			<td><input type="text" class="jogocaixa" id="Arabia-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Arabia"></td>
-			<td>Polônia</td>
+			<td>ArÃ¡bia Saudita</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Arabia-Polonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Polonia-Arabia"></td>
+			<td>PolÃ´nia</td>
 		</tr>
 		<tr>
-			<td>México</td>
-			<td><input type="text" class="jogocaixa" id="Mexico-Polonia"> x <input type="text" class="jogocaixa" id="Polonia-Mexico"></td>
-			<td>Polônia</td>
+			<td>MÃ©xico</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Mexico-Polonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Polonia-Mexico"></td>
+			<td>PolÃ´nia</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gc">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -182,45 +148,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgD">Grupo D</h2>
+	 <h2 class="cabeÃ§alho" id="hgD">Grupo D</h2>
 	 <table class="jogos-rivais">
 		<tr>
-			<td>Austrália</td>
-			<td><input type="text" class="jogocaixa" id="Australia-Dinamarca"> x <input type="text" class="jogocaixa" id="Dinamarca-Australia"></td>
+			<td>AustrÃ¡lia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Australia-Dinamarca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Dinamarca-Australia"></td>
 			<td>Dinamarca</td>
 		</tr>
 		<tr>
-			<td>Austrália</td>
-			<td><input type="text" class="jogocaixa" id="Australia-Franca"> x <input type="text" class="jogocaixa" id="Franca-Australia"></td>
-			<td>França</td>
+			<td>AustrÃ¡lia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Australia-Franca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Franca-Australia"></td>
+			<td>FranÃ§a</td>
 		</tr>
 		<tr>
-			<td>Austrália</td>
-			<td><input type="text" class="jogocaixa" id="Australia-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Australia"></td>
-			<td>Tunísia</td>
-		</tr>
-		<tr>
-			<td>Dinamarca</td>
-			<td><input type="text" class="jogocaixa" id="Dinamarca-Franca"> x <input type="text" class="jogocaixa" id="Franca-Dinamarca"></td>
-			<td>França</td>
+			<td>AustrÃ¡lia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Australia-Tunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Tunisia-Australia"></td>
+			<td>TunÃ­sia</td>
 		</tr>
 		<tr>
 			<td>Dinamarca</td>
-			<td><input type="text" class="jogocaixa" id="Dinamarca-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Dinamarca"></td>
-			<td>Tunísia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Dinamarca-Franca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Franca-Dinamarca"></td>
+			<td>FranÃ§a</td>
 		</tr>
 		<tr>
-			<td>França</td>
-			<td><input type="text" class="jogocaixa" id="Franca-Tunisia"> x <input type="text" class="jogocaixa" id="Tunisia-Franca"></td>
-			<td>Tunísia</td>
+			<td>Dinamarca</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Dinamarca-Tunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Tunisia-Dinamarca"></td>
+			<td>TunÃ­sia</td>
+		</tr>
+		<tr>
+			<td>FranÃ§a</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Franca-Tunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Tunisia-Franca"></td>
+			<td>TunÃ­sia</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gd">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -230,45 +196,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgE">Grupo E</h2>
+	 <h2 class="cabeÃ§alho" id="hgE">Grupo E</h2>
 	 <table class="jogos-rivais">
 		<tr>
 			<td>Alemanha</td>
-			<td><input type="text" class="jogocaixa" id="Alemanha-CostaRica"> x <input type="text" class="jogocaixa" id="CostaRica-Alemanha"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Alemanha-CostaRica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRica-Alemanha"></td>
 			<td>Costa Rica</td>
 		</tr>
 		<tr>
 			<td>Alemanha</td>
-			<td><input type="text" class="jogocaixa" id="Alemanha-Espanha"> x <input type="text" class="jogocaixa" id="Espanha-Alemanha"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Alemanha-Espanha"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Espanha-Alemanha"></td>
 			<td>Espanha</td>
 		</tr>
 		<tr>
 			<td>Alemanha</td>
-			<td><input type="text" class="jogocaixa" id="Alemanha-Japao"> x <input type="text" class="jogocaixa" id="Japao-Alemanha"></td>
-			<td>Japão</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Alemanha-Japao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Japao-Alemanha"></td>
+			<td>JapÃ£o</td>
 		</tr>
 		<tr>
 			<td>Costa Rica</td>
-			<td><input type="text" class="jogocaixa" id="CostaRica-Espanha"> x <input type="text" class="jogocaixa" id="Espanha-CostaRica"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRica-Espanha"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Espanha-CostaRica"></td>
 			<td>Espanha</td>
 		</tr>
 		<tr>
 			<td>Costa Rica</td>
-			<td><input type="text" class="jogocaixa" id="CostaRica-Japao"> x <input type="text" class="jogocaixa" id="Japao-CostaRica"></td>
-			<td>Japão</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRica-Japao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Japao-CostaRica"></td>
+			<td>JapÃ£o</td>
 		</tr>
 		<tr>
 			<td>Espanha</td>
-			<td><input type="text" class="jogocaixa" id="Espanha-Japao"> x <input type="text" class="jogocaixa" id="Espanha-Japao"></td>
-			<td>Japão</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Espanha-Japao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Espanha-Japao"></td>
+			<td>JapÃ£o</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-ge">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -278,45 +244,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgF">Grupo F</h2>
+	 <h2 class="cabeÃ§alho" id="hgF">Grupo F</h2>
 	 <table class="jogos-rivais">
 		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" class="jogocaixa" id="Belgica-Canada"> x <input type="text" class="jogocaixa" id="Canada-Belgica"></td>
-			<td>Canadá</td>
+			<td>BÃ©lgica</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Belgica-Canada"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Canada-Belgica"></td>
+			<td>CanadÃ¡</td>
 		</tr>
 		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" class="jogocaixa" id="Belgica-Croacia"> x <input type="text" class="jogocaixa" id="Croacia-Belgica"></td>
-			<td>Croácia</td>
+			<td>BÃ©lgica</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Belgica-Croacia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Croacia-Belgica"></td>
+			<td>CroÃ¡cia</td>
 		</tr>
 		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" class="jogocaixa" id="Belgica-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Belgica"></td>
+			<td>BÃ©lgica</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Belgica-Marrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Marrocos-Belgica"></td>
 			<td>Marrocos</td>
 		</tr>
 		<tr>
-			<td>Canadá</td>
-			<td><input type="text" class="jogocaixa" id="Canada-Croacia"> x <input type="text" class="jogocaixa" id="Croacia-Canada"></td>
-			<td>Croácia</td>
+			<td>CanadÃ¡</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Canada-Croacia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Croacia-Canada"></td>
+			<td>CroÃ¡cia</td>
 		</tr>
 		<tr>
-			<td>Canadá</td>
-			<td><input type="text" class="jogocaixa" id="Canada-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Canada"></td>
+			<td>CanadÃ¡</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Canada-Marrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Marrocos-Canada"></td>
 			<td>Marrocos</td>
 		</tr>
 		<tr>
-			<td>Croácia</td>
-			<td><input type="text" class="jogocaixa" id="Croacia-Marrocos"> x <input type="text" class="jogocaixa" id="Marrocos-Croacia"></td>
+			<td>CroÃ¡cia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Croacia-Marrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Marrocos-Croacia"></td>
 			<td>Marrocos</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gf">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -326,45 +292,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgG">Grupo G</h2>
+	 <h2 class="cabeÃ§alho" id="hgG">Grupo G</h2>
 	 <table class="jogos-rivais">
 		<tr>
 			<td>Brasil</td>
-			<td><input type="text" class="jogocaixa" id="Brasil-Camaroes"> x <input type="text" class="jogocaixa" id="Camaroes-Brasil"></td>
-			<td>Camarões</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Brasil-Camaroes"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Camaroes-Brasil"></td>
+			<td>CamarÃµes</td>
 		</tr>
 		<tr>
 			<td>Brasil</td>
-			<td><input type="text" class="jogocaixa" id="Brasil-Suica"> x <input type="text" class="jogocaixa" id="Suica-Brasil"></td>
-			<td>Suíça</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Brasil-Suica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Suica-Brasil"></td>
+			<td>SuÃ­Ã§a</td>
 		</tr>
 		<tr>
 			<td>Brasil</td>
-			<td><input type="text" class="jogocaixa" id="Brasil-Servia"> x <input type="text" class="jogocaixa" id="Servia-Brasil"></td>
-			<td>Sérvia</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Brasil-Servia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Servia-Brasil"></td>
+			<td>SÃ©rvia</td>
 		</tr>
 		<tr>
-			<td>Camarões</td>
-			<td><input type="text" class="jogocaixa" id="Camaroes-Suica"> x <input type="text" class="jogocaixa" id="Suica-Camaroes"></td>
-			<td>Suíça</td>
+			<td>CamarÃµes</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Camaroes-Suica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Suica-Camaroes"></td>
+			<td>SuÃ­Ã§a</td>
 		</tr>
 		<tr>
-			<td>Camarões</td>
-			<td><input type="text" class="jogocaixa" id="Camaroes-Servia"> x <input type="text" class="jogocaixa" id="Servia-Camaroes"></td>
-			<td>Sérvia</td>
+			<td>CamarÃµes</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Camaroes-Servia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Servia-Camaroes"></td>
+			<td>SÃ©rvia</td>
 		</tr>
 		<tr>
-			<td>Suíça</td>
-			<td><input type="text" class="jogocaixa" id="Suica-Servia"> x <input type="text" class="jogocaixa" id="Servia-Suica"></td>
-			<td>Sérvia</td>
+			<td>SuÃ­Ã§a</td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Suica-Servia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Servia-Suica"></td>
+			<td>SÃ©rvia</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gg">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -374,45 +340,45 @@
 		</tbody>
 	 </table>
 	 
-	 <h2 class="cabeçalho" id="hgH">Grupo H</h2>
+	 <h2 class="cabeÃ§alho" id="hgH">Grupo H</h2>
 	 <table class="jogos-rivais">
 		<tr>
 			<td>Coreia do Sul	</td>
-			<td><input type="text" class="jogocaixa" id="Coreia-Gana"> x <input type="text" class="jogocaixa" id="Gana-Coreia"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Coreia-Gana"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gana-Coreia"></td>
 			<td>Gana</td>
 		</tr>
 		<tr>
 			<td>Coreia do Sul	</td>
-			<td><input type="text" class="jogocaixa" id="Coreia-Portugal"> x <input type="text" class="jogocaixa" id="Portugal-Coreia"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Coreia-Portugal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Portugal-Coreia"></td>
 			<td>Portugal</td>
 		</tr>
 		<tr>
 			<td>Coreia do Sul	</td>
-			<td><input type="text" class="jogocaixa" id="Coreia-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Coreia"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Coreia-Uruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Uruguai-Coreia"></td>
 			<td>Uruguai</td>
 		</tr>
 		<tr>
 			<td>Gana</td>
-			<td><input type="text" class="jogocaixa" id="Gana-Portugal"> x <input type="text" class="jogocaixa" id="Portugal-Gana"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gana-Portugal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Portugal-Gana"></td>
 			<td>Portugal</td>
 		</tr>
 		<tr>
 			<td>Gana</td>
-			<td><input type="text" class="jogocaixa" id="Gana-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Gana"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Gana-Uruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Uruguai-Gana"></td>
 			<td>Uruguai</td>
 		</tr>
 		<tr>
 			<td>Portugal</td>
-			<td><input type="text" class="jogocaixa" id="Portugal-Uruguai"> x <input type="text" class="jogocaixa" id="Uruguai-Portugal"></td>
+			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Portugal-Uruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="Uruguai-Portugal"></td>
 			<td>Uruguai</td>
 		</tr>
 	</table>
 	 <table class="tabela">
 		<tbody id="tabela-gh">
 			<tr>
-		      <th>País</th>
+		      <th>PaÃ­s</th>
 		      <th>Jogos</th>
-		      <th>Vitórias</th>
+		      <th>VitÃ³rias</th>
 		      <th>Derrotas</th>
 		      <th>Empates</th>
 		      <th>Total de gols</th>
@@ -422,115 +388,5 @@
 		</tbody>
 	 </table>
 </body>
-<script>
-		//Inicialização
-		const paises = ["Catar", "Equador", "Holanda", "Senegal", 
-		"Estados Unidos", "Inglaterra", "Irã", "País de Gales", 
-		"Argentina", "Arábia Saudita", "México", "Polônia", 
-		"Austrália", "Dinamarca", "França", "Tunísia", 
-		"Alemanha", "Costa Rica", "Espanha", "Japão",
-		"Bélgica", "Canadá", "Croácia", "Marrocos",
-		"Brasil", "Camarões", "Suíça", "Sérvia",
-		"Coreia do Sul", "Gana", "Portugal", "Uruguai"];
-		
-		var selecoes = [];
-		for (i=0;i<paises.length;i++) {
-			selecoes[i] = {
-					nome: paises[i],
-					grupo: '',
-					pontos: 0,
-					saldo: 0,
-					gols: 0,
-					vit: 0,
-					der: 0,
-					emp: 0,
-					jogos: 0
-				}
-			if (i<4) {
-				selecoes[i].grupo = "A";
-			} else if (i>3 && i<8) {
-				selecoes[i].grupo = "B";
-			} else if (i>7 && i<12) {
-				selecoes[i].grupo = "C";
-			} else if (i>11 && i<16) {
-				selecoes[i].grupo = "D";
-			} else if (i>15 && i<20) {
-				selecoes[i].grupo = "E";
-			} else if (i>19 && i<24) {
-				selecoes[i].grupo = "F";
-			} else if (i>23 && i<28) {
-				selecoes[i].grupo = "G";
-			} else if (i>27 && i<32) {
-				selecoes[i].grupo = "H";
-			}
-		}
-		for (i=0;i<selecoes.length;i++) {
-			console.log(`País: ${selecoes[i].nome}
-		Grupo: ${selecoes[i].grupo}
-		Gols: ${selecoes[i].gols}`);
-		}
-
-		
-		for (i=0;i<selecoes.length;i++) {
-			if (selecoes[i].grupo == "A") {
-				var tabela = document.getElementById("tabela-ga");
-				var cabeçalho = document.getElementById("hgA");
-			} else if (selecoes[i].grupo == "B") {
-				var tabela = document.getElementById("tabela-gb");
-				var cabeçalho = document.getElementById("hgB");
-			} else if (selecoes[i].grupo == "C") {
-				var tabela = document.getElementById("tabela-gc");
-				var cabeçalho = document.getElementById("hgC");
-			} else if (selecoes[i].grupo == "D") {
-				var tabela = document.getElementById("tabela-gd");
-				var cabeçalho = document.getElementById("hgD");
-			} else if (selecoes[i].grupo == "E") {
-				var tabela = document.getElementById("tabela-ge");
-				var cabeçalho = document.getElementById("hgE");
-			} else if (selecoes[i].grupo == "F") {
-				var tabela = document.getElementById("tabela-gf");
-				var cabeçalho = document.getElementById("hgF");
-			} else if (selecoes[i].grupo == "G") {
-				var tabela = document.getElementById("tabela-gg");
-				var cabeçalho = document.getElementById("hgG");
-			} else if (selecoes[i].grupo == "H") {
-				var tabela = document.getElementById("tabela-gh");
-				var cabeçalho = document.getElementById("hgH");
-			}
-			var tr = document.createElement("tr");
-			tr.innerHTML = `<td>${selecoes[i].nome}</td>
-			<td>${selecoes[i].jogos}</td>
-			<td>${selecoes[i].vit}</td>
-			<td>${selecoes[i].der}</td>
-			<td>${selecoes[i].emp}</td>
-			<td>${selecoes[i].gols}</td>
-			<td>${selecoes[i].saldo}</td>
-			<td>${selecoes[i].pontos}</td>`;
-			tabela.append(tr);
-			if (i%4 === 0) {
-				var n = i+4;
-			}
-		}
-		
-		
-		
-		
-		const G = ["gA", "gB", "gC", "gD", "gE", "gF", "gG", "gH"];
-		const gA = ["Catar", "Equador", "Holanda", "Senegal"];
-		const gB = ["Estados Unidos", "Inglaterra", "Irã", "País de Gales"];
-		const gC = ["Argentina", "Arábia Saudita", "México", "Polônia"];
-		const gD = ["Austrália", "Dinamarca", "França", "Tunísia"];
-		const gE = ["Alemanha", "Costa Rica", "Espanha", "Japão"];
-		const gF = ["Bélgica", "Canadá", "Croácia", "Marrocos"];
-		const gG = ["Brasil", "Camarões", "Suíça", "Sérvia"];
-		const gH = ["Coreia do Sul", "Gana", "Portugal", "Uruguai"];
-		
-		function enter(event) {
-			var d = document.getElementById('textbox');
-			if (event.keyCode == 13) {
-				document.write(result)
-				console.log("Enter key is pressed");
-			}
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 	</html>
