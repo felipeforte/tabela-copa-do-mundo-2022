@@ -39,11 +39,6 @@
 				selecoes[i].grupo = "H";
 			}
 		}
-		for (i=0;i<selecoes.length;i++) {
-			console.log(`País: ${selecoes[i].nome}
-		Grupo: ${selecoes[i].grupo}
-		Gols: ${selecoes[i].gols}`);
-		}
 
 		
 		for (i=0;i<selecoes.length;i++) {
@@ -106,4 +101,15 @@
 				document.write(result)
 				console.log("Enter key is pressed");
 			}
+		}
+		function comparar(id1, id2, time1, time2) {
+			var valorid1 = parseInt(id1.value);
+			var valorid2 = parseInt(id2.value);
+			
+			if(id1.value == "" || id2.value == ""){
+				return;
+			}
+
+			console.log(valorid1);
+			console.log(valorid2);
 		}
