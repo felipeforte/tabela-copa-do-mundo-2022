@@ -8,6 +8,16 @@
 		"Brasil", "Camarões", "Suíça", "Sérvia",
 		"Coreia do Sul", "Gana", "Portugal", "Uruguai"];
 		
+		var jogo = []
+		
+		for (i=0;i<100;i++) {
+			jogo[i] = {
+				time1: 0,
+				time2: 0,
+				partida: false
+			}
+		}
+		
 		var selecoes = [];
 		for (i=0;i<paises.length;i++) {
 			selecoes[i] = {
@@ -42,31 +52,9 @@
 
 		
 		for (i=0;i<selecoes.length;i++) {
-			if (selecoes[i].grupo == "A") {
-				var tabela = document.getElementById("tabela-ga");
-				var cabeçalho = document.getElementById("hgA");
-			} else if (selecoes[i].grupo == "B") {
-				var tabela = document.getElementById("tabela-gb");
-				var cabeçalho = document.getElementById("hgB");
-			} else if (selecoes[i].grupo == "C") {
-				var tabela = document.getElementById("tabela-gc");
-				var cabeçalho = document.getElementById("hgC");
-			} else if (selecoes[i].grupo == "D") {
-				var tabela = document.getElementById("tabela-gd");
-				var cabeçalho = document.getElementById("hgD");
-			} else if (selecoes[i].grupo == "E") {
-				var tabela = document.getElementById("tabela-ge");
-				var cabeçalho = document.getElementById("hgE");
-			} else if (selecoes[i].grupo == "F") {
-				var tabela = document.getElementById("tabela-gf");
-				var cabeçalho = document.getElementById("hgF");
-			} else if (selecoes[i].grupo == "G") {
-				var tabela = document.getElementById("tabela-gg");
-				var cabeçalho = document.getElementById("hgG");
-			} else if (selecoes[i].grupo == "H") {
-				var tabela = document.getElementById("tabela-gh");
-				var cabeçalho = document.getElementById("hgH");
-			}
+			var tabela = document.getElementById(`tabela-g${selecoes[i].grupo}`);
+			var cabeçalho = document.getElementById(`hg${selecoes[i].grupo}`);
+			
 			var tr = document.createElement("tr");
 			tr.innerHTML = `<td>${selecoes[i].nome}</td>
 			<td>${selecoes[i].jogos}</td>
@@ -77,9 +65,10 @@
 			<td>${selecoes[i].saldo}</td>
 			<td>${selecoes[i].pontos}</td>`;
 			tabela.append(tr);
-			if (i%4 === 0) {
-				var n = i+4;
-			}
+		}
+		
+		function atualizarTabela(grupo) {
+			var tabela = document.getElementById(`tabela-g${grupo}`)			
 		}
 		
 		
@@ -102,14 +91,29 @@
 				console.log("Enter key is pressed");
 			}
 		}
-		function comparar(id1, id2, time1, time2) {
-			var valorid1 = parseInt(id1.value);
-			var valorid2 = parseInt(id2.value);
-			
+		function comparar(id1, id2, time1, time2, i) {
 			if(id1.value == "" || id2.value == ""){
 				return;
 			}
-
-			console.log(valorid1);
-			console.log(valorid2);
+			var valorid1 = parseInt(id1.value);
+			var valorid2 = parseInt(id2.value);
+			
+			if (jogo[i].partida) {
+				time1.gols -= jogo[i].time1;
+				time2.gols -= jogo[i].time2;
+				jogo[i].time1 = 0;
+				jogo[i].time2 = 0;
+				time1.gols += valorid1;
+				time2.gols += valorid2;
+				jogo[i].time1 = valorid1;
+				jogo[i].time2 = valorid2;
+			} else {
+				time1.gols += valorid1;
+				time2.gols += valorid2;
+				jogo[i].time1 = valorid1;
+				jogo[i].time2 = valorid2;
+				time1.jogos += 1;
+				time2.jogos += 1;
+				jogo[i].partida = true;
+			}
 		}
