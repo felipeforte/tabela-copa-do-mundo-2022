@@ -14,6 +14,8 @@
 			jogo[i] = {
 				time1: 0,
 				time2: 0,
+				vit1: false,
+				vit2: false,
 				partida: false
 			}
 		}
@@ -67,6 +69,21 @@
 			tabela.append(tr);
 		}
 		
+		function classificar() {
+			if (valorid1 > valorid2) {
+					time1.vit += 1;
+					time2.der += 1;
+					jogo[i].vit1 = true;
+				} else if (valorid2 > valorid1) {
+					time1.der += 1;
+					time2.vit += 1;
+					jogo[i].vit2 = true;
+				} else {
+					time1.emp += 1;
+					time2.emp += 1;
+				}
+		}
+		
 		function atualizarTabela(grupo) {
 			var tabela = document.getElementById(`tabela-g${grupo}`)
 			tabela.innerHTML = "";
@@ -114,14 +131,40 @@
 			var valorid2 = parseInt(id2.value);
 			
 			if (jogo[i].partida) {
+				// Apaga dados existentes
 				time1.gols -= jogo[i].time1;
 				time2.gols -= jogo[i].time2;
 				jogo[i].time1 = 0;
 				jogo[i].time2 = 0;
+				if (jogo[i].vit1) {
+					time1.vit -= 1;
+					time2.der -= 1;
+					jogo[i].vit1 = false;
+				} else if (jogo[i].vit2) {
+					time1.der -= 1;
+					time2.vit -= 1;
+					jogo[i].vit2 = false;
+				} else {
+					time1.emp -= 1;
+					time2.emp -= 1;
+				}
+				// Inicializa dados novos
 				time1.gols += valorid1;
 				time2.gols += valorid2;
 				jogo[i].time1 = valorid1;
 				jogo[i].time2 = valorid2;
+				if (valorid1 > valorid2) {
+					time1.vit += 1;
+					time2.der += 1;
+					jogo[i].vit1 = true;
+				} else if (valorid2 > valorid1) {
+					time1.der += 1;
+					time2.vit += 1;
+					jogo[i].vit2 = true;
+				} else {
+					time1.emp += 1;
+					time2.emp += 1;
+				}
 			} else {
 				time1.gols += valorid1;
 				time2.gols += valorid2;
@@ -129,6 +172,18 @@
 				jogo[i].time2 = valorid2;
 				time1.jogos += 1;
 				time2.jogos += 1;
+				if (valorid1 > valorid2) {
+					time1.vit += 1;
+					time2.der += 1;
+					jogo[i].vit1 = true;
+				} else if (valorid2 > valorid1) {
+					time1.der += 1;
+					time2.vit += 1;
+					jogo[i].vit2 = true;
+				} else {
+					time1.emp += 1;
+					time2.emp += 1;
+				}
 				jogo[i].partida = true;
 			}
 			atualizarTabela(time1.grupo);
