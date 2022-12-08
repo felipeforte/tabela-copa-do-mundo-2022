@@ -134,6 +134,8 @@
 				// Apaga dados existentes
 				time1.gols -= jogo[i].time1;
 				time2.gols -= jogo[i].time2;
+				time1.saldo -= (jogo[i].time1 - jogo[i].time2);
+				time2.saldo -= (jogo[i].time2 - jogo[i].time1);
 				jogo[i].time1 = 0;
 				jogo[i].time2 = 0;
 				if (jogo[i].vit1) {
@@ -165,6 +167,8 @@
 					time1.emp += 1;
 					time2.emp += 1;
 				}
+				time1.saldo += (valorid1 - valorid2)
+				time2.saldo += (valorid2 - valorid1)
 			} else {
 				time1.gols += valorid1;
 				time2.gols += valorid2;
