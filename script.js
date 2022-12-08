@@ -68,7 +68,22 @@
 		}
 		
 		function atualizarTabela(grupo) {
-			var tabela = document.getElementById(`tabela-g${grupo}`)			
+			var tabela = document.getElementById(`tabela-g${grupo}`)
+			tabela.innerHTML = "";
+			for (let x of selecoes) {
+				if (x.grupo == grupo) {
+					var tr = document.createElement("tr");
+					tr.innerHTML = `<td>${x.nome}</td>
+					<td>${x.jogos}</td>
+					<td>${x.vit}</td>
+					<td>${x.der}</td>
+					<td>${x.emp}</td>
+					<td>${x.gols}</td>
+					<td>${x.saldo}</td>
+					<td>${x.pontos}</td>`;
+					tabela.append(tr);
+				}
+			}
 		}
 		
 		
@@ -116,4 +131,6 @@
 				time2.jogos += 1;
 				jogo[i].partida = true;
 			}
+			atualizarTabela(time1.grupo);
+			atualizarTabela(time2.grupo);
 		}
