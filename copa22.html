@@ -1,408 +1,152 @@
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="estilos.css">
-</head>
-
-<body>
-	<h2 class="cabeçalho" id="hgA">Grupo A</h2>
-	<table class="jogos-rivais">
-		<tr>
-			<td>Catar</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CatarEquador" onkeyup="comparar(CatarEquador, EquadorCatar, selecoes[0], selecoes[1], 0)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onkeyup="comparar(CatarEquador, EquadorCatar, selecoes[0], selecoes[1], 0)" class="jogocaixa" id="EquadorCatar"></td>
-			<td>Equador</td>
-		</tr>
-		<tr>
-			<td>Catar</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CatarHolanda" onkeyup="comparar(CatarHolanda, HolandaCatar, selecoes[0], selecoes[2], 1)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="HolandaCatar"onkeyup="comparar(CatarHolanda, HolandaCatar, selecoes[0], selecoes[2], 1)"></td>
-			<td>Holanda</td>
-		</tr>
-		<tr>
-			<td>Catar</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CatarSenegal" onkeyup="comparar(CatarSenegal, SenegalCatar, selecoes[0], selecoes[3], 2)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SenegalCatar" onkeyup="comparar(CatarSenegal, SenegalCatar, selecoes[0], selecoes[3], 2)"></td>
-			<td>Senegal</td>
-		</tr>
-		<tr>
-			<td>Equador</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EquadorHolanda" onkeyup="comparar(EquadorHolanda, HolandaEquador, selecoes[1], selecoes[2], 3)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="HolandaEquador" onkeyup="comparar(EquadorHolanda, HolandaEquador, selecoes[1], selecoes[2], 3)"></td>
-			<td>Holanda</td>
-		</tr>
-		<tr>
-			<td>Equador</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EquadorSenegal" onkeyup="comparar(EquadorSenegal, SenegalEquador, selecoes[1], selecoes[3], 4)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SenegalEquador" onkeyup="comparar(EquadorSenegal, SenegalEquador, selecoes[1], selecoes[3], 4)"></td>
-			<td>Senegal</td>
-		</tr>
-		<tr>
-			<td>Holanda</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="HolandaSenegal" onkeyup="comparar(HolandaSenegal, SenegalHolanda, selecoes[2], selecoes[3], 5)"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SenegalHolanda" onkeyup="comparar(HolandaSenegal, SenegalHolanda, selecoes[2], selecoes[3], 5)"></td>
-			<td>Senegal</td>
-		</tr>
-	</table>
-	<table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gA">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgB">Grupo B</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Estados Unidos</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUAInglaterra"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="InglaterraEUA"></td>
-			<td>Inglaterra</td>
-		</tr>
-		<tr>
-			<td>Estados Unidos</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUAIra"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="IraEUA"></td>
-			<td>Irã</td>
-		</tr>
-		<tr>
-			<td>Estados Unidos</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EUAGales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GalesEUA"></td>
-			<td>País de Gales</td>
-		</tr>
-		<tr>
-			<td>Inglaterra</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="InglaterraIra"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="IraInglaterra"></td>
-			<td>Irã</td>
-		</tr>
-		<tr>
-			<td>Inglaterra</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="InglaterraGales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GalesInglaterra"></td>
-			<td>País de Gales</td>
-		</tr>
-		<tr>
-			<td>Irã</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="IraGales"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GalesIra"></td>
-			<td>País de Gales</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gB">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgC">Grupo C</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Argentina</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArgentinaArabia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArabiaArgentina"></td>
-			<td>Arábia Saudita</td>
-		</tr>
-		<tr>
-			<td>Argentina</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArgentinaMexico"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MexicoArgentina"></td>
-			<td>México</td>
-		</tr>
-		<tr>
-			<td>Argentina</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArgentinaPolonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PoloniaArgentina"></td>
-			<td>Polônia</td>
-		</tr>
-		<tr>
-			<td>Arábia Saudita</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArabiaMexico"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MexicoArabia"></td>
-			<td>México</td>
-		</tr>
-		<tr>
-			<td>Arábia Saudita</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ArabiaPolonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PoloniaArabia"></td>
-			<td>Polônia</td>
-		</tr>
-		<tr>
-			<td>México</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MexicoPolonia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PoloniaMexico"></td>
-			<td>Polônia</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gC">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgD">Grupo D</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Austrália</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AustraliaDinamarca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="DinamarcaAustralia"></td>
-			<td>Dinamarca</td>
-		</tr>
-		<tr>
-			<td>Austrália</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AustraliaFranca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="FrancaAustralia"></td>
-			<td>França</td>
-		</tr>
-		<tr>
-			<td>Austrália</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AustraliaTunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="TunisiaAustralia"></td>
-			<td>Tunísia</td>
-		</tr>
-		<tr>
-			<td>Dinamarca</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="DinamarcaFranca"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="FrancaDinamarca"></td>
-			<td>França</td>
-		</tr>
-		<tr>
-			<td>Dinamarca</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="DinamarcaTunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="TunisiaDinamarca"></td>
-			<td>Tunísia</td>
-		</tr>
-		<tr>
-			<td>França</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="FrancaTunisia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="TunisiaFranca"></td>
-			<td>Tunísia</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gD">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgE">Grupo E</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Alemanha</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AlemanhaCostaRica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRicaAlemanha"></td>
-			<td>Costa Rica</td>
-		</tr>
-		<tr>
-			<td>Alemanha</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AlemanhaEspanha"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EspanhaAlemanha"></td>
-			<td>Espanha</td>
-		</tr>
-		<tr>
-			<td>Alemanha</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="AlemanhaJapao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="JapaoAlemanha"></td>
-			<td>Japão</td>
-		</tr>
-		<tr>
-			<td>Costa Rica</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRicaEspanha"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EspanhaCostaRica"></td>
-			<td>Espanha</td>
-		</tr>
-		<tr>
-			<td>Costa Rica</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CostaRicaJapao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="JapaoCostaRica"></td>
-			<td>Japão</td>
-		</tr>
-		<tr>
-			<td>Espanha</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EspanhaJapao"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="EspanhaJapao"></td>
-			<td>Japão</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gE">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgF">Grupo F</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BelgicaCanada"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CanadaBelgica"></td>
-			<td>Canadá</td>
-		</tr>
-		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BelgicaCroacia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CroaciaBelgica"></td>
-			<td>Croácia</td>
-		</tr>
-		<tr>
-			<td>Bélgica</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BelgicaMarrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MarrocosBelgica"></td>
-			<td>Marrocos</td>
-		</tr>
-		<tr>
-			<td>Canadá</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CanadaCroacia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CroaciaCanada"></td>
-			<td>Croácia</td>
-		</tr>
-		<tr>
-			<td>Canadá</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CanadaMarrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MarrocosCanada"></td>
-			<td>Marrocos</td>
-		</tr>
-		<tr>
-			<td>Croácia</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CroaciaMarrocos"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="MarrocosCroacia"></td>
-			<td>Marrocos</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gF">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgG">Grupo G</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Brasil</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BrasilCamaroes"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CamaroesBrasil"></td>
-			<td>Camarões</td>
-		</tr>
-		<tr>
-			<td>Brasil</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BrasilSuica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SuicaBrasil"></td>
-			<td>Suíça</td>
-		</tr>
-		<tr>
-			<td>Brasil</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="BrasilServia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ServiaBrasil"></td>
-			<td>Sérvia</td>
-		</tr>
-		<tr>
-			<td>Camarões</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CamaroesSuica"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SuicaCamaroes"></td>
-			<td>Suíça</td>
-		</tr>
-		<tr>
-			<td>Camarões</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CamaroesServia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ServiaCamaroes"></td>
-			<td>Sérvia</td>
-		</tr>
-		<tr>
-			<td>Suíça</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="SuicaServia"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="ServiaSuica"></td>
-			<td>Sérvia</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gG">
-		</tbody>
-	 </table>
-	 
-	 <h2 class="cabeçalho" id="hgH">Grupo H</h2>
-	 <table class="jogos-rivais">
-		<tr>
-			<td>Coreia do Sul	</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CoreiaGana"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GanaCoreia"></td>
-			<td>Gana</td>
-		</tr>
-		<tr>
-			<td>Coreia do Sul	</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CoreiaPortugal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PortugalCoreia"></td>
-			<td>Portugal</td>
-		</tr>
-		<tr>
-			<td>Coreia do Sul	</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="CoreiaUruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="UruguaiCoreia"></td>
-			<td>Uruguai</td>
-		</tr>
-		<tr>
-			<td>Gana</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GanaPortugal"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PortugalGana"></td>
-			<td>Portugal</td>
-		</tr>
-		<tr>
-			<td>Gana</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="GanaUruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="UruguaiGana"></td>
-			<td>Uruguai</td>
-		</tr>
-		<tr>
-			<td>Portugal</td>
-			<td><input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="PortugalUruguai"> x <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="jogocaixa" id="UruguaiPortugal"></td>
-			<td>Uruguai</td>
-		</tr>
-	</table>
-	 <table class="tabela">
-		<thead>
-			<tr>
-		      <th>País</th>
-		      <th>Jogos</th>
-		      <th>Vitórias</th>
-		      <th>Derrotas</th>
-		      <th>Empates</th>
-		      <th>Total de gols</th>
-		      <th>Saldo de gols</th>
-		      <th>Pontos</th>
-		    </tr>
-		</thead>
-		<tbody id="tabela-gH">
-		</tbody>
-	 </table>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+	
+	<body>
+		<h2 class="cabeçalho" id="hgA">Grupo A</h2>
+		<table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gA">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgB">Grupo B</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gB">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgC">Grupo C</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gC">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgD">Grupo D</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gD">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgE">Grupo E</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gE">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgF">Grupo F</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gF">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgG">Grupo G</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gG">
+			</tbody>
+		 </table>
+		 
+		 <h2 class="cabeçalho" id="hgH">Grupo H</h2>
+		 <table class="tabela">
+			<thead>
+				<tr>
+			      <th>País</th>
+			      <th>Jogos</th>
+			      <th>Vitórias</th>
+			      <th>Derrotas</th>
+			      <th>Empates</th>
+			      <th>Total de gols</th>
+			      <th>Saldo de gols</th>
+			      <th>Pontos</th>
+			    </tr>
+			</thead>
+			<tbody id="tabela-gH">
+			</tbody>
+		 </table>
+	</body>
 	<script type="text/javascript" src="script.js"></script>
-	</html>
+</html>
