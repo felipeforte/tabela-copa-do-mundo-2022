@@ -1,14 +1,14 @@
-//InicializaÃ§Ã£o do vetor paises com todos os paÃ­ses ordenados do grupo A ao grupo H
+//Inicialização do vetor paises com todos os países ordenados do grupo A ao grupo H
 const paises = ["Catar", "Equador", "Holanda", "Senegal", 
-"Estados Unidos", "Inglaterra", "IrÃ£", "PaÃ­s de Gales", 
-"Argentina", "ArÃ¡bia Saudita", "MÃ©xico", "PolÃ´nia", 
-"AustrÃ¡lia", "Dinamarca", "FranÃ§a", "TunÃ­sia", 
-"Alemanha", "Costa Rica", "Espanha", "JapÃ£o",
-"BÃ©lgica", "CanadÃ¡", "CroÃ¡cia", "Marrocos",
-"Brasil", "CamarÃµes", "SuÃ­Ã§a", "SÃ©rvia",
+"Estados Unidos", "Inglaterra", "Irã", "País de Gales", 
+"Argentina", "Arábia Saudita", "México", "Polônia", 
+"Austrália", "Dinamarca", "França", "Tunísia", 
+"Alemanha", "Costa Rica", "Espanha", "Japão",
+"Bélgica", "Canadá", "Croácia", "Marrocos",
+"Brasil", "Camarões", "Suíça", "Sérvia",
 "Coreia do Sul", "Gana", "Portugal", "Uruguai"];
 
-//InicializaÃ§Ã£o do vetor abrev com todos as abreviaÃ§Ãµes das seleÃ§Ãµes na ordem do vetor paises
+//Inicialização do vetor abrev com todos as abreviações das seleções na ordem do vetor paises
 const abrev = ["QAT", "ECU", "NED", "SEN",
 "USA", "ENG", "IRN", "WAL",
 "ARG", "KSA", "MEX", "POL",
@@ -33,10 +33,10 @@ for (i=0;i<100;i++) {
 	}
 }
 
-//Inicializando vetor "selecoes" para conter cada seleÃ§Ã£o organizada em Ã­ndices
+//Inicializando vetor "selecoes" para conter cada seleção organizada em índices
 var selecoes = [];
 
-//Inicializando objetos contendo dados de gols, pontos, etc. para cada seleÃ§Ã£o dentro do vetor "selecoes"
+//Inicializando objetos contendo dados de gols, pontos, etc. para cada seleção dentro do vetor "selecoes"
 var n = 0;
 for (i=0;i<paises.length;i++) {
 	selecoes[i] = {
@@ -51,7 +51,7 @@ for (i=0;i<paises.length;i++) {
 			emp: 0,
 			jogos: 0
 		}
-	// Inicializando o grupo das seleÃ§Ãµes
+	// Inicializando o grupo das seleções
 	selecoes[i].grupo = grupos[n];
 	if (i>0 && i%4 == 0) {
 		n += 1;
@@ -63,17 +63,17 @@ for (i=0;i<paises.length;i++) {
 var n = 0;
 var qj = 0;
 for (i=0;i<selecoes.length;i++) {
-	var cabeÃ§alho = document.getElementById(`hg${selecoes[i].grupo}`);
-	// Cria uma tabela a cada 4 seleÃ§Ãµes (grupo) para conter 
+	var cabeçalho = document.getElementById(`hg${selecoes[i].grupo}`);
+	// Cria uma tabela a cada 4 seleções (grupo) para conter 
 	// a entrada dos placares e o nome dos times
 	if (i%4 == 0) {
 		var tabela = document.createElement("table");
 		tabela.className = "jogos-rivais"
 		tabela.id = `rivais${selecoes[i].grupo}`
-		cabeÃ§alho.after(tabela);
+		cabeçalho.after(tabela);
 		n += 4;
 	}
-	// Seleciona tabela recÃ©m-criada
+	// Seleciona tabela recém-criada
 	var tabela = document.getElementById(`rivais${selecoes[i].grupo}`);
 	for (j=i+1;j<n;j++) {
 		var tr = document.createElement("tr");
@@ -83,7 +83,7 @@ for (i=0;i<selecoes.length;i++) {
 		var td2 = document.createElement("td");
 		td2.innerHTML = `${selecoes[j].nome}`;
 		
-		// Inicializa inputs em HTML com ids para receber dados dos jogos, seleÃ§Ãµes, etc.
+		// Inicializa inputs em HTML com ids para receber dados dos jogos, seleções, etc.
 		var inputid1 = `${selecoes[i].abrev}x${selecoes[j].abrev}`;
 		var inputid2 = `${selecoes[j].abrev}x${selecoes[i].abrev}`;
 		var tdinput1 = document.createElement("td");
@@ -117,7 +117,7 @@ for (i=0;i<selecoes.length;i++) {
 	
 }
 
-//FunÃ§Ã£o para classificar gols, pontos, saldo
+//Função para classificar gols, pontos, saldo
 function classifcar(v1, v2, time1, time2, jogo, tipo) {
 	if (tipo == "apagar") {
 		tipo = -1;
@@ -148,7 +148,7 @@ function classifcar(v1, v2, time1, time2, jogo, tipo) {
 	}
 }
 
-//FunÃ§Ã£o para ordenar classificaÃ§Ã£o por grupos utilizando o vetor "vetorGrupo"
+//Função para ordenar classificação por grupos utilizando o vetor "vetorGrupo"
 var vetorGrupo = [];
 function ordenar(grupo) {
 	g = 0;
@@ -158,7 +158,7 @@ function ordenar(grupo) {
 			g++;
 		}
 	}
-	//Algoritmo bubble sort colocando os maiores valores no inÃ­cio do vetor
+	//Algoritmo bubble sort colocando os maiores valores no início do vetor
 	for (i=0;i<vetorGrupo.length-1;i++) {
 		for (j=0;j<vetorGrupo.length-1-i;j++) {
 			if (vetorGrupo[j+1].pontos > vetorGrupo[j].pontos || vetorGrupo[j+1].pontos == vetorGrupo[j].pontos && vetorGrupo[j+1].saldo > vetorGrupo[j].saldo) {
@@ -170,7 +170,7 @@ function ordenar(grupo) {
 	}
 }
 
-//FunÃ§Ã£o para atualizar tabela baseada no grupo
+//Função para atualizar tabela baseada no grupo
 function atualizarTabela(grupo) {
 	var tabela = document.getElementById(`tabela-g${grupo}`)
 	tabela.innerHTML = "";
@@ -200,7 +200,7 @@ function enter(event) {
 		console.log("Enter key is pressed");
 	}
 }
-// FunÃ§Ã£o para receber dados dos inputs e apresentÃ¡-los na tabela
+// Função para receber dados dos inputs e apresentá-los na tabela
 function comparar(id1, id2, time1, time2, i) {
 	if(id1.value == "" || id2.value == ""){
 		return;
@@ -208,7 +208,7 @@ function comparar(id1, id2, time1, time2, i) {
 	var valorid1 = parseInt(id1.value);
 	var valorid2 = parseInt(id2.value);
 	
-	// Verifica se hÃ¡ uma partida registrada
+	// Verifica se há uma partida registrada
 	if (jogo[i].partida) {
 		// Apaga dados existentes
 		time1.gols -= jogo[i].time1;
@@ -228,7 +228,7 @@ function comparar(id1, id2, time1, time2, i) {
 		jogo[i].time2 = valorid2;
 		classifcar(valorid1, valorid2, time1, time2, jogo[i], "inserir");
 
-	// Em caso de nÃ£o haver partida registrada, inicializa dados
+	// Em caso de não haver partida registrada, inicializa dados
 	} else {
 		time1.gols += valorid1;
 		time2.gols += valorid2;
