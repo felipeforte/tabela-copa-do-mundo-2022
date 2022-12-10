@@ -148,7 +148,7 @@ function classifcar(v1, v2, time1, time2, jogo, tipo) {
 	}
 }
 
-//Função para ordenar classificação por grupos utilizando o vetor "vetorGrupo"
+//Função para ordenar classificação por grupo utilizando o vetor "vetorGrupo"
 var vetorGrupo = [];
 function ordenar(grupo) {
 	g = 0;
