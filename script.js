@@ -1,4 +1,4 @@
-//Inicialização do vetor paises com todos os países ordenados do grupo A ao grupo H
+// Inicialização do vetor paises com todos os países ordenados do grupo A ao grupo H
 const paises = ["Catar", "Equador", "Holanda", "Senegal", 
 "Estados Unidos", "Inglaterra", "Irã", "País de Gales", 
 "Argentina", "Arábia Saudita", "México", "Polônia", 
@@ -8,7 +8,7 @@ const paises = ["Catar", "Equador", "Holanda", "Senegal",
 "Brasil", "Camarões", "Suíça", "Sérvia",
 "Coreia do Sul", "Gana", "Portugal", "Uruguai"];
 
-//Inicialização do vetor abrev com todos as abreviações das seleções na ordem do vetor paises
+// Inicialização do vetor abrev com todos as abreviações das seleções na ordem do vetor paises
 const abrev = ["QAT", "ECU", "NED", "SEN",
 "USA", "ENG", "IRN", "WAL",
 "ARG", "KSA", "MEX", "POL",
@@ -33,10 +33,10 @@ for (i=0;i<100;i++) {
 	}
 }
 
-//Inicializando vetor "selecoes" para conter cada seleção organizada em índices
+// Inicializando vetor "selecoes" para conter cada seleção organizada em índices
 var selecoes = [];
 
-//Inicializando objetos contendo dados de gols, pontos, etc. para cada seleção dentro do vetor "selecoes"
+// Inicializando objetos contendo dados de gols, pontos, etc. para cada seleção dentro do vetor "selecoes"
 var n = 0;
 for (i=0;i<paises.length;i++) {
 	selecoes[i] = {
@@ -117,7 +117,7 @@ for (i=0;i<selecoes.length;i++) {
 	
 }
 
-//Função para classificar gols, pontos, saldo
+// Função para classificar gols, pontos, saldo
 function classifcar(v1, v2, time1, time2, jogo, tipo) {
 	if (tipo == "apagar") {
 		tipo = -1;
@@ -148,7 +148,7 @@ function classifcar(v1, v2, time1, time2, jogo, tipo) {
 	}
 }
 
-//Função para ordenar classificação por grupo utilizando o vetor "vetorGrupo"
+// Função para ordenar classificação por grupo utilizando o vetor "vetorGrupo"
 var vetorGrupo = [];
 function ordenar(grupo) {
 	g = 0;
@@ -158,7 +158,7 @@ function ordenar(grupo) {
 			g++;
 		}
 	}
-	//Algoritmo bubble sort colocando os maiores valores no início do vetor
+	// Algoritmo bubble sort colocando os maiores valores no início do vetor
 	for (i=0;i<vetorGrupo.length-1;i++) {
 		for (j=0;j<vetorGrupo.length-1-i;j++) {
 			if (vetorGrupo[j+1].pontos > vetorGrupo[j].pontos || vetorGrupo[j+1].pontos == vetorGrupo[j].pontos && vetorGrupo[j+1].saldo > vetorGrupo[j].saldo) {
@@ -170,7 +170,7 @@ function ordenar(grupo) {
 	}
 }
 
-//Função para atualizar tabela baseada no grupo
+// Função para atualizar tabela baseada no grupo
 function atualizarTabela(grupo) {
 	var tabela = document.getElementById(`tabela-g${grupo}`)
 	tabela.innerHTML = "";
@@ -189,17 +189,49 @@ function atualizarTabela(grupo) {
 	}
 }
 // Inicializar todas as tabelas
-for (let x of grupos) {
-	atualizarTabela(x);
-}
-
-function enter(event) {
-	var d = document.getElementById('textbox');
-	if (event.keyCode == 13) {
-		document.write(result)
-		console.log("Enter key is pressed");
+function atualizarTodas() {
+	for (let x of grupos) {
+		atualizarTabela(x);
 	}
 }
+atualizarTodas();
+
+// Função para atualizar placares em caso de carregamento via JSON
+function atualizarPlacares() {
+	var n = 0;
+	var jn = 0;
+	for (i=0;i<selecoes.length;i++) {
+		if (i%4 == 0) {
+			n+=4;
+		}
+		for (j=i+1;j<n;j++) {
+			var caixa1 = document.getElementById(`${selecoes[i].abrev}x${selecoes[j].abrev}`);
+			var caixa2 = document.getElementById(`${selecoes[j].abrev}x${selecoes[i].abrev}`);
+			caixa1.value = jogo[jn].time1;
+			caixa2.value = jogo[jn].time2;
+			jn++;
+		}
+	}
+}
+
+// Funções para persistência de dados
+function salvarJSON() {
+	localStorage.setItem("tabela-dados",JSON.stringify(selecoes))
+	localStorage.setItem("jogos-dados",JSON.stringify(jogo))
+}
+function carregarJSON() {
+	var stringJSONtabela = localStorage.getItem("tabela-dados");
+	var stringJSONjogos = localStorage.getItem("jogos-dados");
+	
+	if (stringJSONtabela == null || stringJSONjogos == null) {
+		return alert("JSON não encontrado");
+	}
+	selecoes = JSON.parse(stringJSONtabela);
+	jogo = JSON.parse(stringJSONjogos);
+	atualizarTodas();
+	atualizarPlacares();
+}
+
 // Função para receber dados dos inputs e apresentá-los na tabela
 function comparar(id1, id2, time1, time2, i) {
 	if(id1.value == "" || id2.value == ""){
